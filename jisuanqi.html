@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>计算器</title>
+		<style type="text/css">
+			*{
+				margin: 0 auto;
+			}
+		
+			#box{
+				width: 320px;
+				height: 300px;
+				font-size: 26px;
+			} 
+				  
+			input[type=button]{
+				display: block;
+				width: 80px;
+				height: 40px;
+				border-radius: 10px;
+				font-size: 26px;
+				color: green;
+				background: pink;
+				float:left;
+				
+			}
+			#aa{
+				display: block;
+				float: left;
+				width: 320px;
+				height: 40px;
+				font-size: 26px;
+				color: green;
+				border-radius: 10px;
+			}
+			#bb{
+				width: 320px;
+				height: 40px;
+				border-radius: 10px;
+				
+				
+			}
+		</style>
+		<script type="text/javascript">
+			function  jishuan(canshu){
+				var num = document.getElementById("aa");
+				switch(canshu){
+					case "c":
+					num.value = "";
+					break;
+					case "=":
+					num.value = eval(num.value);
+					break;
+					default:
+					num.value += canshu;
+					break;
+				}
+			}
+			var obutton = document.getElementsByTagName("input[type=button]");
+			for(var i=0;i<obutton.length;i++){
+//				obutton[i].onmouseover = jishuan();
+              alert(obutton[i].value);
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" name="" id="aa" value=""/>
+			<input type="button" name="" id="" value="0" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="1" onclick="jishuan(this.value)"/>
+			<input type="button" name="" id="" value="2" onclick="jishuan(this.value)"/>
+			<input type="button" name="" id="" value="3" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="4" onclick="jishuan(this.value)"/>
+			<input type="button" name="" id="" value="5" onclick="jishuan(this.value)"/>
+			<input type="button" name="" id="" value="6" onclick="jishuan(this.value)"/>
+			<input type="button" name="" id="" value="7" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="8" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="9" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="." onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="c" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="+" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="-" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="*" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="" value="/" onclick="jishuan(this.value)" />
+			<input type="button" name="" id="bb" value="=" onclick="jishuan(this.value)" />
+		</div>
+	</body>
+</html>
